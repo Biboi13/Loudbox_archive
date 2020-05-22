@@ -17,6 +17,28 @@
 
 
     <link rel="icon" type="image/png" href="assets/images/loudbox_logo_icon.png" />
+	  
+	  <!--For input Number-->
+	  <style>
+	  
+	  
+	  input::-webkit-outer-spin-button,
+	  input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+			}
+	  </style>
+
+	  
+<!--DataTable-->
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+	<script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+   
 </head>
 
 <body>
@@ -139,6 +161,13 @@
                                             </a>
                                     </li>
 									
+									   <li>
+											<a href="provider.html">
+											<i class="metismenu-icon">
+											</i>Provider Management
+											</a>
+										</li>
+									
 									
 
 
@@ -152,6 +181,13 @@
                                                 <i class="metismenu-icon fas fa-comment-dots">
                                                 </i>Messaging
                               
+                                    </a>
+                            </li>
+							
+							 <li>
+								<a href="file.html">
+									<i class="metismenu-icon fas fas fa-file"></i>
+										Files
                                     </a>
                             </li>
 
@@ -227,15 +263,25 @@
                </div>     
 
 
-						 <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+					 <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
 							<li class="nav-item">
-								<a role="tab" class="nav-link active " id="tab-0" data-toggle="tab" href="#tab-content-0">
-									<span>Buyer</span>
+								<a role="tab" class="active border-0 btn-pill btn-wide btn-transition btn btn-outline-alternate mb-3" id="tab-0" data-toggle="tab" href="#tab-content-0">
+										<span>Job Dashboard</span>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a role="tab" class="nav-link" id="tab-1" data-toggle="tab" href="#tab-content-1">
-									<span>Job</span>
+								<a role="tab" class="border-0 btn-pill btn-wide btn-transition btn btn-outline-alternate ml-3 mb-3" id="tab-1" data-toggle="tab" href="#tab-content-1">
+										<span>Job List</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a role="tab" class="border-0 btn-pill btn-wide btn-transition btn btn-outline-alternate ml-3 mb-3" id="tab-2" data-toggle="tab" href="#tab-content-2">
+									<span>Add Job</span>
+								</a>
+							</li>
+							<li class="nav-item ">
+								<a role="tab" class="border-0 btn-pill btn-wide btn-transition btn btn-outline-alternate ml-3 mb-3" id="tab-3" data-toggle="tab" href="#tab-content-3">
+										<span>Edit Job</span>
 								</a>
 							</li>
 						 </ul>
@@ -254,50 +300,49 @@
 							   
 							    
                <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <div class="main-card mb-3 card">
-                           <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                              <div class="row">
-                                 <div class="col-sm-12">
-                                    
-									
-									
-                                    <table style="width: 100%;" id="example" class="table-responsive mb-0 table table-hover table-bordered table-sm" role="grid" aria-describedby="example_info">
-                                       <thead class= "bg-red">
-                                          <tr>
-                                             <th>Buyer</th>
-                                             <th>Skill</th>
-											 <th colspan="2"> Action </th>
-                                           
-                                          
-                                          </tr>
-                                       </thead>
-                                       <tbody>
-                                          <td></td>
-                                          <td></td>
-                                       
-                                       
-                                          <td>
-                                             <button type="button" class="btn mr-2 mb-2 update btn btn-warning" data-toggle="modal" data-target="#exampleModal_Edit">
-                                             Edit
-                                             </button>
-                                          </td>
-                                          <td>
-                                             <button type="button" class="btn mr-2 mb-2 update btn btn-danger" data-toggle="modal" data-target="#exampleModal_Edit">
-                                             Delete
-                                             </button>
-                                          </td>
-                                       </tbody>
-                                    </table>
-									
-									
-                                 </div>
-                              </div>
-                           </div>
+                    <div class="row">
+                      
+					  <div class="col-md-6">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-body"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                                <h5 class="card-title">Vertical Bars</h5>
+                                                <canvas id="canvas" height="660" class="chartjs-render-monitor" width="1320" style="display: block; width: 660px; height: 330px;"></canvas>
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+                        <div class="col-md-6">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                        <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Largest Months with Projects</h5>
+                                    <canvas id="chart-area" width="636" height="318" class="chartjs-render-monitor" style="display: block; width: 636px; height: 318px;"></canvas>
+                                </div>
+                            </div>
+
                         </div>
-                     </div>
-                  </div>
+                    </div>
+					
+					
+					<div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card-shadow-primary border mb-3 card card-body border-primary"><h5 class="card-title">Primary Card Shadow</h5>With supporting text below as a natural lead-in to additional content.</div>
+                                      
+
+                                  
+                                </div>
+								<div class="col-md-6">
+                                        <div class="card-shadow-primary border mb-3 card card-body border-primary"><h5 class="card-title">Primary Card Shadow</h5>With supporting text below as a natural lead-in to additional content.</div>
+                                  
+                                </div>
+                                </div>
 				  
 				  
 				  
@@ -309,43 +354,51 @@
 							
 						<!--Second tab-->
                             <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
-                              
-							  <div class="row">
+                            
+							   <div class="row">
                      <div class="col-md-12">
-                        <div class="main-card mb-3 card">
+                        <div class="main-card mb-3 card py-2 px-2">
                            <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
                               <div class="row">
                                  <div class="col-sm-12">
                                     
 									
-									
-                                    <table style="width: 100%;" id="example" class="table-responsive mb-0 table table-hover table-bordered table-sm" role="grid" aria-describedby="example_info">
-                                       <thead class= "bg-red">
+									<table id="example" class="table table-striped table-bordered table-responsive mb-0 table table-hoverz table-sm " style="width:100%">
+								<thead>
                                           <tr>
-                                             <th>Buyer</th>
-                                             <th>Skill</th>
-											 <th colspan="2"> Action </th>
-                                           
-                                          
+                                             <th>Contact ID</th>
+                                             <th>First Name</th>
+                                             <th>Middle Initial</th>
+                                             <th>Last Name</th>
+                                             <th>Address</th>
+                                             <th>Barangay District</th>
+                                             <th>City Municipality</th>
+                                             <th>Postal Code</th>
+                                             <th>Phone 1</th>
+                                             <th>Phone 2</th>
+                                             <th>Email</th>
+                                             
                                           </tr>
                                        </thead>
-                                       <tbody>
-                                          <td></td>
-                                          <td></td>
-                                       
-                                       
-                                          <td>
-                                             <button type="button" class="btn mr-2 mb-2 update btn btn-warning" data-toggle="modal" data-target="#exampleModal_Edit">
-                                             Edit
-                                             </button>
-                                          </td>
-                                          <td>
-                                             <button type="button" class="btn mr-2 mb-2 update btn btn-danger" data-toggle="modal" data-target="#exampleModal_Edit">
-                                             Delete
-                                             </button>
-                                          </td>
-                                       </tbody>
-                                    </table>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+                <td>$320,800</td>
+                <td>$320,800</td>
+                <td>$320,800</td>
+                <td>$320,800</td>
+                <td>$320,800</td>
+            </tr>
+            
+        </tbody>
+        
+    </table>
+    
 									
 									
                                  </div>
@@ -353,15 +406,308 @@
                            </div>
                         </div>
                      </div>
+                
                   </div>
-							  
-							  
 							
 							  
                             </div>
 							
+							<div class="tab-pane tabs-animation fade" id="tab-content-2" role="tabpanel">
+                             <div class="main-card mb-3 card ">
+                            <div class="card-body">
+                              
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-row">
+									
+									  <div class="col-md-12 mb-2">
+                                            <label for="validationCustom01">JOB ID</label>
+                                            <input type="text" class="form-control" id="validationCustom01" placeholder="ID" required disabled>
+                                        </div>                   
+                                    </div>
+									
+									
+                                    <div class="form-row">
+                                       
+                                         <div class="col-md-12 mb-2">
+                                        
+										   <label for="validationCustom01">Descriptions</label>
+										<div class="position-relative row form-group">
+										
+                                                <div class="col-sm-12"><textarea name="text" id="exampleText" class="form-control"></textarea></div>
+                                            </div>
+											
+
+                                            </div>
+                                    </div>
+									
+									<div class="form-row">
+									
+									
+									  <div class="col-md-12 mb-2">
+                                        
+										  <label for="validationCustom01">Budget</label>
+										<div class="input-group ml-1">
+                                                        <div class="input-group-prepend"><span class="input-group-text">₱</span></div>
+                                                        <input type="text" class="form-control"></div>
+											
+
+                                            </div>
+										
+                                        </div>
+										
+										
+										<div class="form-row">
+									
+									
+									  <div class="col-md-12 mb-2">
+                                        
+										
+										
+										 <label for="validationCustom01">Start Date</label>
+										<div class="input-group ml-1">
+                                                        <div class="input-group-prepend"><span class="input-group-text"><i class='far fa-calendar-alt'></i></span></div>
+                                                         
+                                                    <input type="date" id="start_date" name="start_date"  class="form-control"></div>
+										
+                                        </div>
+                                        </div>
+										
+										<div class="form-row">
+									
+									
+									  <div class="col-md-12 mb-2">
+                                        
+										
+										
+										 <label for="validationCustom01">End Date</label>
+										<div class="input-group ml-1">
+                                                        <div class="input-group-prepend"><span class="input-group-text"><i class='far fa-calendar-alt'></i></span></div>
+                                                         
+                                                    <input type="date" id="start_date" name="start_date"  class="form-control"></div>
+										
+                                        </div>
+                                        </div>
+										
+										
+									
+										
+										
+										<div class="form-row">
+									
+									
+									
+									 <div class="col-md-12 mb-2">
+                                        
+										
+										
+										 <label for="validationCustom01">End Date</label>
+										<div class="input-group">
+                                                     
+                                                         
+                                                  <label for="validationCustom01">Contact</label>
+													<div class="input-group">
+                                                     
+                                                         
+                                                   <select name="select" id="exampleSelect" class="form-control">
+												   <option value="1">Benedict</option>
+												  <option value="2">Biboi</option>
+												  <option value="3">Heidi</option>
+												  <option value="4">Alex</option>
+												   
+												   </select>
+                                        </div>
+                                        </div>
+										
+									
+									
+										
+										
+							
+                                        </div>
+										
+										
+										   <div class="form-row">
+                                       
+                                         <div class="col-md-12">
+                                        
+										   <label for="validationCustom01">Note</label>
+										<div class="position-relative row form-group">
+										
+                                                <div class="col-sm-12"><textarea name="text" id="exampleText" class="form-control"></textarea></div>
+                                            </div>
+											
+
+                                            </div>
+                                    </div>
+                                   
+										
+										<center>
+                                    <button class="btn btn-success mb-2" type="submit">Submit</button>
+									</center>
+									
+									  </form>
+                                        </div>
+										
+								
+									
+									
+                           
+							
+							
+								
+                            </div>
+							
 							
                         </div>
+							    
+							
+                        </div>
+						
+						<div class="tab-pane tabs-animation fade" id="tab-content-3" role="tabpanel">
+                            
+							   <div class="main-card mb-3 card ">
+                            <div class="card-body">
+                              
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-row">
+									
+									  <div class="col-md-12 mb-2">
+                                            <label for="validationCustom01">JOB ID</label>
+                                            <input type="text" class="form-control" id="validationCustom01" placeholder="ID" required>
+                                        </div>                   
+                                    </div>
+									
+									
+                                    <div class="form-row">
+                                       
+                                         <div class="col-md-12 mb-2">
+                                        
+										   <label for="validationCustom01">Descriptions</label>
+										<div class="position-relative row form-group">
+										
+                                                <div class="col-sm-12"><textarea name="text" id="exampleText" class="form-control"></textarea></div>
+                                            </div>
+											
+
+                                            </div>
+                                    </div>
+									
+									<div class="form-row">
+									
+									
+									  <div class="col-md-12 mb-2">
+                                        
+										  <label for="validationCustom01">Budget</label>
+										<div class="input-group ml-1">
+                                                        <div class="input-group-prepend"><span class="input-group-text">₱</span></div>
+                                                        <input type="text" class="form-control"></div>
+											
+
+                                            </div>
+										
+                                        </div>
+										
+										
+										<div class="form-row">
+									
+									
+									  <div class="col-md-12 mb-2">
+                                        
+										
+										
+										 <label for="validationCustom01">Start Date</label>
+										<div class="input-group ml-1">
+                                                        <div class="input-group-prepend"><span class="input-group-text"><i class='far fa-calendar-alt'></i></span></div>
+                                                         
+                                                    <input type="date" id="start_date" name="start_date"  class="form-control"></div>
+										
+                                        </div>
+                                        </div>
+										
+										<div class="form-row">
+									
+									
+									  <div class="col-md-12 mb-2">
+                                        
+										
+										
+										 <label for="validationCustom01">End Date</label>
+										<div class="input-group ml-1">
+                                                        <div class="input-group-prepend"><span class="input-group-text"><i class='far fa-calendar-alt'></i></span></div>
+                                                         
+                                                    <input type="date" id="start_date" name="start_date"  class="form-control"></div>
+										
+                                        </div>
+                                        </div>
+										
+										
+									
+										
+										
+										<div class="form-row">
+									
+									
+									
+									 <div class="col-md-12 mb-2">
+                                        
+										
+										
+										 <label for="validationCustom01">Contact</label>
+										<div class="input-group">
+                                                     
+                                                         
+                                                   <select name="select" id="exampleSelect" class="form-control">
+												   <option value="1">Benedict</option>
+												  <option value="2">Biboi</option>
+												  <option value="3">Heidi</option>
+												  <option value="4">Alex</option>
+												   
+												   </select>
+										
+                                        </div>
+                                        </div>
+										
+									
+									
+										
+										
+							
+                                        </div>
+										
+										
+										   <div class="form-row">
+                                       
+                                         <div class="col-md-12">
+                                        
+										   <label for="validationCustom01">Note</label>
+										<div class="position-relative row form-group">
+										
+                                                <div class="col-sm-12"><textarea name="text" id="exampleText" class="form-control"></textarea></div>
+                                            </div>
+											
+
+                                            </div>
+                                    </div>
+                                   
+										
+										<center>
+                                    <button class="btn btn-success mb-2" type="submit">Submit</button>
+									</center>
+									
+									  </form>
+                                        </div>
+										
+								
+									
+									
+                           
+							
+							
+								
+                            </div>
+							
+							  
+                            </div>
                     </div>
 
 					
@@ -384,8 +730,22 @@
             </div>   </div>
 		 
     </div>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script type="text/javascript" src="assets/scripts/main.js"></script>
+   <script>
+	$(document).ready(function() {
+		$('#example').DataTable();
+	} );
+	</script>	
+	
+	<script>
+        $('#start_date').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+	
+
+      
+      <script type="text/javascript" src="assets/scripts/validation.js"></script>
+	 	<script type="text/javascript" src="assets/scripts/main.js"></script>
 
 
 </body>
